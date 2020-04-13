@@ -1,0 +1,30 @@
+{
+  "name": "@juztcode/ts-collectios",
+  "description": "Data structures for typescript",
+  "author": "randilfernando <randil.fernando@outlook.com>",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc",
+    "build-publish": "npm run tsc && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juztcode/ts-collections"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/juztcode/ts-collections/issues"
+  },
+  "homepage": "https://github.com/juztcode/ts-collections#readme",
+  "keywords": [
+    "npm",
+    "collections",
+    "data-structures"
+  ],
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}
