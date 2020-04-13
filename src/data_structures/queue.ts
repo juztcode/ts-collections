@@ -25,9 +25,9 @@ export class Queue<T> {
     return this.array.length;
   }
 
-  public forEach(cb) {
-    while (this.size() > 0) {
-      cb(this.poll());
+  public forEach(cb: (v: T) => void) {
+    for (let i = this.size() - 1; i > -1; i--) {
+      cb(this.array[i]);
     }
   }
 }
