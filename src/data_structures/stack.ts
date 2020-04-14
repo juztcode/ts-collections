@@ -1,24 +1,24 @@
-export class Queue<T> {
+export class Stack<T> {
   private readonly array: T[];
 
   public constructor(private maxLength?: number) {
     this.array = [];
   }
 
-  public offer(t: T) {
+  public push(t: T) {
     if (!this.maxLength || this.size() < this.maxLength) {
       this.array.push(t);
     } else {
-      throw new Error('Queue full');
+      throw new Error('Stack full');
     }
   }
 
-  public poll(): T {
-    return this.array.shift();
+  public pop(): T {
+    return this.array.pop();
   }
 
   public peek(): T {
-    return this.array[0];
+    return this.array[this.size() - 1];
   }
 
   public size(): number {
@@ -26,6 +26,8 @@ export class Queue<T> {
   }
 
   public forEach(cb: (v: T) => void) {
-    this.array.forEach(cb);
+    for (let i = this.size() - 1; i > -1; i--) {
+      cb(this.array[i]);
+    }
   }
 }
